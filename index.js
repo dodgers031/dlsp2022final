@@ -47,7 +47,3 @@ app.get("/", (req, res) => {
 // app.get("/manage", (req, res) => {
 //     res.render("manage");
 // });
-sql = "SELECT * FROM product";
-pool.query(sql, [], (err, res) => {
-    console.log(err, res)
-});
