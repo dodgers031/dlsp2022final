@@ -15,8 +15,10 @@
     <h3>Import Summary</h3>
     <strong><p id='no_of_records'>Initial Number of Books in Database: <%=totRecs%> </p></strong>
     <strong> <p id='no_of_records_inserted'>Books Inserted Successfully: <%=success%> </p></strong>
-    <strong><p id='no_of_records_deleted'>Books not Inserted: <%=failed%></p></strong>
+    <strong><p id='no_of_records_total'>Resulting Number of Books in Database: <%=totRecs + success %></p></strong>
     <br>
+    <strong><p id='no_of_records_processed'>Total Books Processed: <%= success + failed %></p></strong>
+    <strong><p id='no_of_records_deleted'>Books not Inserted: <%=failed%></p></strong>
     <strong><p id='error'>Errors:<%=errors%></p></strong>
 <% } %>
 
