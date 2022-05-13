@@ -79,10 +79,10 @@ app.post("/import", upload.single('filename'), async (req, res) => {
 
     lines.forEach(line => {
         //console.log(line);
-        customer = line.split(",");
-        //console.log(customer);
+        book = line.split(",");
+        //console.log(book);
         const sql = "INSERT INTO BOOK(book_id, title, total_pages, rating, isbn, published_date ) VALUES ($1, $2, $3, $4, $5, $6)";
-        pool.query(sql, customer, (err, result) => {
+        pool.query(sql, book, (err, result) => {
             if (err) {
                 console.log(`Insert Error.  Error message: ${err.message}`);
                 failCount++;
@@ -113,6 +113,6 @@ app.get("/sumofseries", (req, res) => {
 // post sumofseries
 app.post("/sumofseries", (req, res) => {
     res.render("sumofseries");
-    console.log("The Sum of the number from 1 to 10 incremented by 2 is 25");
+    // console.log("The Sum of the number from 1 to 10 incremented by 2 is 25");
     
 });
