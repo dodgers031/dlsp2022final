@@ -1,0 +1,41 @@
+<%- include("_header") -%>
+
+<h1>Calculate Sum of a Series</h1>
+
+<form action="/sumofseries" method="post">
+  <div class="form-horizontal">
+    <div class="form-group row">
+      <label class="col-form-label col-sm-2" for="inputa">Enter Starting Number</label>
+      <div class="col-sm-7">
+          <input class="form-control" value ="input1" type="number" pattern="[0-9]" name="Enter Starting Number" required />
+      </div>
+      <label>(required)</label>
+  </div>
+  
+  
+  <div class="form-group row">
+      <label class="col-form-label col-sm-2" for="inputb">Enter Ending Number</label>
+      <div class="col-sm-7">
+          <input class="form-control" value ="input2" type="number" pattern="[0-9]" name="Enter Ending Number" required />
+      </div>
+      <label>(required)</label>
+  </div>
+  
+  
+  <div class="form-group row">
+      <label class="col-form-label col-sm-2" for="inputc">Enter Increment</label>
+      <div class="col-sm-7">
+          <input class="form-control" value="input3" type="number" pattern="[0-9]" name="Enter Increment" required />
+      </div>
+      <label>(required)</label>
+  </div>  
+    <div class="form-group row">
+      <label class="col-form-label col-sm-2"></label>
+      <div class="col-sm-10">
+        <input type="submit" value="Calculate Sum" class="btn btn-primary " />
+      </div>
+    </div>
+  </div>
+</form>
+
+<%- include("_footer") -%>
